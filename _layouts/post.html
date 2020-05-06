@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<hr>
+<p>{{ page.date | date_to_string }} &ndash; By {{ page.author }}</p>
+
+
+{{ content }}
+
+<p> </p><p> </p>
+
+<hr>
+
+<p>
+{% if page.previous and page.previous.categories == page.categories %}
+<a href="{{page.previous.url}}" >Previous article</a>
+{% endif %}
+
+&nbsp &nbsp
+
+{% if page.next and page.next.categories == page.categories %}
+<a href="{{page.next.url}}" >Next article</a>
+{% endif %}
+
+</p>
+
+<!--and page.next.categories contains "blog"-->
+<!--{% if page.previous %}
+<a href="{{page.previous.url}}" >Previous article</a>
+{% endif %}
+
+
+ &nbsp &nbsp
+
+{% if page.next %}
+<a href="{{page.next.url}}" >Next article</a>
+{% endif %}
+-->
