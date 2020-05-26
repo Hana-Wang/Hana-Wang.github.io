@@ -28,7 +28,7 @@
 
     <h1>Input/Output with files</h1>
 <hr>
-<p>23 May 2019 &ndash; By </p>
+<p>23 May 2019 &ndash; By Min Wang</p>
 
 
 <p>Data can be stored in the form of files. Writing all data records into a file sequentially can form a sequential file. Sequential files are essentially sequential streams.</p>
@@ -178,7 +178,7 @@
 <span class="sr">//</span> <span class="n">which</span> <span class="n">is</span> <span class="n">moved</span> <span class="n">from</span> <span class="n">the</span> <span class="n">ending</span> <span class="n">position</span> <span class="n">of</span> <span class="n">the</span> <span class="n">file</span> <span class="s2">"al.in"</span> <span class="n">by</span> <span class="n">an</span> <span class="n">offset</span><span class="p">(</span><span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"location"</span><span class="p">),</span>
 <span class="sr">//</span> <span class="k">then</span><span class="p">,</span> <span class="n">here</span><span class="p">,</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"loaction"</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">negative</span> <span class="n">value</span><span class="o">.</span></code></pre></figure>
 
-<p>3. Reading/Writing operations on Binary files  </p>
+<p>4. Reading/Writing operations on Binary files  </p>
 <p> Reading and writing operations on binary files is performed by using the file stream member functions: write, read</p>
 <p> </p>
 <ul>
@@ -228,6 +228,13 @@
 
 </ul>
 
+<p>5. Reading/Writing operations on Text files  </p>
+<p> When opening a file using file stream, if the 'ios::binary' flag is not included in their opening mode, then the file stream we are using is text file stream.</p>
+<p> The reading and writing operations on text files are performed in the same way that we operated with cin (read from standard input stream)
+</p>
+<p> and cout (write to standard output stream). </p>
+<p> </p>
+
 <h2>Example projects on Github</h2>
 <p> </p>
 <p>Three examples of tasks regarding the input/output operations on binary files are illustrated. </p>
@@ -258,7 +265,8 @@ change student "Jack" to "Mike", change "Jane 40" to "Grace 70",<br />
 
 <p> </p>
 
-<p> The corresponding source codes are named "binaryfilewrite.cpp", "binaryfileread.cpp" and "binaryfileRW.cpp".</p>
+<p> The corresponding source codes are named "binaryfilewrite.cpp", "binaryfileread.cpp" and "binaryfileRW.cpp". </p>
+<p> The programming test results are added in the end of the corresponding cpp files.</p>
 <p><br /></p>
 <p>The source codes are available in Github, the repository
 <a href="https://github.com/Hana-Wang/File-Input-Output">
@@ -311,7 +319,7 @@ body {
  &nbsp &nbsp
 
 
-<a href="/jekyl/welcome-to-jekyll.html" >Next article</a>
+<a href="/templates/ClassTemplates.html" >Next article</a>
 
 -->
 

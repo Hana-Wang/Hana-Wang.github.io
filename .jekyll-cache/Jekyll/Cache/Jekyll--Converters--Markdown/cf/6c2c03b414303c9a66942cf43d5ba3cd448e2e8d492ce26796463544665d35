@@ -1,0 +1,44 @@
+I"&<p> Generic Programming is that there is no specified data types when using algorithms. It means algorithm can apply to many types of data
+structures.</p>
+<p> </p>
+
+<p> Benefits: generic programming can reduce the repeating codes. </p>
+
+<p> </p>
+
+<p> There are two types of templates, one is Function Template, the other is Class Template</p>
+
+<h2>Function Templates vs Overloaded Functions </h2>
+
+<p>Overloaded Functions</p>
+
+<ul>
+
+<p> </p>
+<li> Overloaded functions are functions which have the same function name but have different parameters. </li>
+
+<p> </p>
+<li> Different parameters means either overloaded functions have a different number of parameters  or any of their parameters are of a different typle.</li>
+
+<p> </p>
+<li> A function cannot be overloaded only by its return type, it should have different parameters with another overloaded function.</li>
+
+</ul>
+
+<p> </p>
+
+<p>Function Templates</p>
+
+<ul>
+
+<p> </p>
+<li> Two functions with the same name and having the same function body, C++ can define these functions with generic types and has a same algorithm, called function templates. </li>
+
+<p> </p>
+<li> When defining a function template, a keyword 'template' is used before defining the function to indicate you are defining a function template.</li>
+
+<p> </p>
+<li> Function template </li>
+
+</ul>
+:ET

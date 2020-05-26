@@ -51,6 +51,7 @@ xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
 <ul>
 
   {% for post in site.categories.CPLUSFiles limit: 5 %}
+  <p> </p>
     <li>
       <p><a href="{{ post.url }}">{{ post.title }}</a></p>
       {{ post.excerpt }}
@@ -59,11 +60,11 @@ xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
 
 </ul>
 
-<p>C++ Language</p>
+<p>Function Templates and Class Templates</p>
 
 <ul>
 
-  {% for post in site.categories.Technical limit: 5 %}
+  {% for post in site.categories.Templates limit: 5 %}
     <li>
       <p><a href="{{ post.url }}">{{ post.title }}</a></p>
       {{ post.excerpt }}

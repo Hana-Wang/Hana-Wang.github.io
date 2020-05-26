@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-26T17:34:45+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Codes</title><link href="http://localhost:4000/codes.html" rel="alternate" type="text/html" title="Codes" /><published>2020-05-14T00:00:00+01:00</published><updated>2020-05-14T00:00:00+01:00</updated><id>http://localhost:4000/codes</id><content type="html" xml:base="http://localhost:4000/codes.html"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyl/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-05-02T04:16:58+01:00</published><updated>2020-05-02T04:16:58+01:00</updated><id>http://localhost:4000/jekyl/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyl/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-26T22:14:04+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyl/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-05-02T04:16:58+01:00</published><updated>2020-05-02T04:16:58+01:00</updated><id>http://localhost:4000/jekyl/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyl/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
 
@@ -26,7 +26,154 @@
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Jekyll</name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Input/Output with files</title><link href="http://localhost:4000/cplusfiles/Files.html" rel="alternate" type="text/html" title="Input/Output with files" /><published>2019-05-23T16:33:36+01:00</published><updated>2019-05-23T16:33:36+01:00</updated><id>http://localhost:4000/cplusfiles/Files</id><content type="html" xml:base="http://localhost:4000/cplusfiles/Files.html">&lt;p&gt;Data can be stored in the form of files. Writing all data records into a file sequentially can form a sequential file. Sequential files are essentially sequential streams.&lt;/p&gt;
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Jekyll</name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Function Templates</title><link href="http://localhost:4000/templates/FunctionTemplate.html" rel="alternate" type="text/html" title="Function Templates" /><published>2019-05-26T00:00:00+01:00</published><updated>2019-05-26T00:00:00+01:00</updated><id>http://localhost:4000/templates/FunctionTemplate</id><content type="html" xml:base="http://localhost:4000/templates/FunctionTemplate.html">&lt;p&gt; Generic Programming is that there is no specified data types when using algorithms. It means algorithm can apply to many types of data
+structures.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; Benefits: generic programming can reduce the repeating codes. &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; There are two types of templates, one is Function Template, the other is Class Template&lt;/p&gt;
+
+&lt;h2&gt;Function Templates vs Overloaded Functions &lt;/h2&gt;
+
+&lt;p&gt;Overloaded Functions&lt;/p&gt;
+
+&lt;ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+&lt;li&gt; Overloaded functions are functions which have the same function name but have different parameters. &lt;/li&gt;
+
+&lt;p&gt; &lt;/p&gt;
+&lt;li&gt; Different parameters means either overloaded functions have a different number of parameters  or any of their parameters are of a different typle.&lt;/li&gt;
+
+&lt;p&gt; &lt;/p&gt;
+&lt;li&gt; A function cannot be overloaded only by its return type, it should have different parameters with another overloaded function.&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Function Templates&lt;/p&gt;
+
+&lt;ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+&lt;li&gt; Two functions with the same name and having the same function body, C++ can define these functions with generic types and has a same algorithm, called function templates. &lt;/li&gt;
+
+&lt;p&gt; &lt;/p&gt;
+&lt;li&gt; When defining a function template, a keyword 'template' is used before defining the function to indicate you are defining a function template.&lt;/li&gt;
+
+&lt;p&gt; &lt;/p&gt;
+&lt;li&gt;A function template has a series of template parameters, which can be regular types or generic type parameters by specifying the keywords either the 'class' or 'typename' followed by an identifier.&lt;/li&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;li&gt;
+
+&lt;p&gt; Syntax &lt;/p&gt;
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Type1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Type2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&amp;gt;&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;can&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keyword&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'class'&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'typename'&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Type2&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FunTemplateName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Type1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Type1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Type2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+ &lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Examples of function templates&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Task1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Define&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;that&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;two&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;same&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variables&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;There&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;one&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parameter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;called&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'T'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;  &lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;can&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keyword&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'class'&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'typename'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Swap&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;no&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Task2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Define&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;that&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;two&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;different&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;types&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variables&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;There&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;are&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;two&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parameters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;one&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;called&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'T1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;other&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;called&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'T2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;T1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;T2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;  &lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;can&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keyword&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'class'&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'typename'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Swap&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;T1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;T2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;no&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Question: how to use function templates? &lt;/h2&gt;
+&lt;p&gt;Example codes:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;compiler&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;automatically&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;generate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;void swap(int&amp;amp; x, int&amp;amp; y)&quot;&lt;/span&gt;
+    &lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;which&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instantiated&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;replacing&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'T'&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'int'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;void swap(T&amp;amp; x, T&amp;amp; y)&quot;&quot;.
+
+    double f = 1.3, g =2.1;
+    swap(f, g);  
+    // the compiler generates a function to use, it is &quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;  
+
+    swap(f, m);
+    // the compiler generates a function to use, it is &quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;
+    // which is done by replacing 'T1' by 'double' and 'T2' by 'int'
+}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt; Notes: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;From the example codes, function template can be overloaded if their template parameters (type parameters) are different, which is because they have a different number of template parameters. &lt;/p&gt; &lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Recall the regular overloaded functions in C++, they are different functions with the same name but their function parameters are different; either because they have a different number of parameters, or because any of their parameters are of a different type. &lt;/p&gt; &lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;h2&gt;Question: how does C++ knows which function or function template to call?  &lt;/h2&gt;
+
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;There is a calling order for C++ compiler when calling overloaded functions, function templates. The choosing order for compiler is as follows.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1st, Find a function where its parameters are matched exactly; a function not by instantiation of the function template.  &lt;/p&gt; &lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;2nd, Find a function template where its template parameters are matched.&lt;/p&gt; &lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;3rd, Find a function where the calling function's parameters type can automatically convert to its function parameters and be matched.&lt;/p&gt; &lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;4th, if no one suitable function or function template can be found to match the calling function's parameters, then, the C++ compiler report the function calling error.&lt;/p&gt; &lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;p&gt;An example code that shows the calling order of function templates, overloaded functions.&lt;/p&gt;
+
+&lt;p&gt;The source codes are available in Github, the repository “……..” .&lt;/p&gt;</content><author><name></name></author><summary type="html">Generic Programming is that there is no specified data types when using algorithms. It means algorithm can apply to many types of data structures.</summary></entry><entry><title type="html">Class Templates</title><link href="http://localhost:4000/templates/ClassTemplates.html" rel="alternate" type="text/html" title="Class Templates" /><published>2019-05-26T00:00:00+01:00</published><updated>2019-05-26T00:00:00+01:00</updated><id>http://localhost:4000/templates/ClassTemplates</id><content type="html" xml:base="http://localhost:4000/templates/ClassTemplates.html">&lt;p&gt;Generic Programming is that there is no specified data types when using algorithms. It means algorithm can apply to many types of data
+structures.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h2&gt;Concepts&lt;/h2&gt;</content><author><name></name></author><summary type="html">Generic Programming is that there is no specified data types when using algorithms. It means algorithm can apply to many types of data structures.</summary></entry><entry><title type="html">Input/Output with files</title><link href="http://localhost:4000/cplusfiles/Files.html" rel="alternate" type="text/html" title="Input/Output with files" /><published>2019-05-23T16:33:36+01:00</published><updated>2019-05-23T16:33:36+01:00</updated><id>http://localhost:4000/cplusfiles/Files</id><content type="html" xml:base="http://localhost:4000/cplusfiles/Files.html">&lt;p&gt;Data can be stored in the form of files. Writing all data records into a file sequentially can form a sequential file. Sequential files are essentially sequential streams.&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 
 &lt;h2&gt;Concepts&lt;/h2&gt;
@@ -173,7 +320,7 @@
 &lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;which&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;moved&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ending&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;position&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;al.in&quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;an&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;location&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
 &lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;loaction&quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;can&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;negative&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;3. Reading/Writing operations on Binary files  &lt;/p&gt;
+&lt;p&gt;4. Reading/Writing operations on Binary files  &lt;/p&gt;
 &lt;p&gt; Reading and writing operations on binary files is performed by using the file stream member functions: write, read&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;ul&gt;
@@ -223,6 +370,13 @@
 
 &lt;/ul&gt;
 
+&lt;p&gt;5. Reading/Writing operations on Text files  &lt;/p&gt;
+&lt;p&gt; When opening a file using file stream, if the 'ios::binary' flag is not included in their opening mode, then the file stream we are using is text file stream.&lt;/p&gt;
+&lt;p&gt; The reading and writing operations on text files are performed in the same way that we operated with cin (read from standard input stream)
+&lt;/p&gt;
+&lt;p&gt; and cout (write to standard output stream). &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+
 &lt;h2&gt;Example projects on Github&lt;/h2&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;Three examples of tasks regarding the input/output operations on binary files are illustrated. &lt;/p&gt;
@@ -253,7 +407,8 @@ change student &quot;Jack&quot; to &quot;Mike&quot;, change &quot;Jane 40&quot; 
 
 &lt;p&gt; &lt;/p&gt;
 
-&lt;p&gt; The corresponding source codes are named &quot;binaryfilewrite.cpp&quot;, &quot;binaryfileread.cpp&quot; and &quot;binaryfileRW.cpp&quot;.&lt;/p&gt;
+&lt;p&gt; The corresponding source codes are named &quot;binaryfilewrite.cpp&quot;, &quot;binaryfileread.cpp&quot; and &quot;binaryfileRW.cpp&quot;. &lt;/p&gt;
+&lt;p&gt; The programming test results are added in the end of the corresponding cpp files.&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;The source codes are available in Github, the repository
 &lt;a href=&quot;https://github.com/Hana-Wang/File-Input-Output&quot;&gt;
@@ -281,7 +436,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 ```
---&gt;</content><author><name></name></author><summary type="html">Data can be stored in the form of files. Writing all data records into a file sequentially can form a sequential file. Sequential files are essentially sequential streams.</summary></entry><entry><title type="html">Apples</title><link href="http://localhost:4000/technical/apples.html" rel="alternate" type="text/html" title="Apples" /><published>2018-08-21T00:00:00+01:00</published><updated>2018-08-21T00:00:00+01:00</updated><id>http://localhost:4000/technical/apples</id><content type="html" xml:base="http://localhost:4000/technical/apples.html">&lt;p&gt;An apple is a sweet, edible fruit produced by an apple tree.&lt;/p&gt;
+--&gt;</content><author><name>Min Wang</name></author><summary type="html">Data can be stored in the form of files. Writing all data records into a file sequentially can form a sequential file. Sequential files are essentially sequential streams.</summary></entry><entry><title type="html">Apples</title><link href="http://localhost:4000/technical/apples.html" rel="alternate" type="text/html" title="Apples" /><published>2018-08-21T00:00:00+01:00</published><updated>2018-08-21T00:00:00+01:00</updated><id>http://localhost:4000/technical/apples</id><content type="html" xml:base="http://localhost:4000/technical/apples.html">&lt;p&gt;An apple is a sweet, edible fruit produced by an apple tree.&lt;/p&gt;
 
 &lt;p&gt;Apple trees are cultivated worldwide, and are the most widely grown species in
 the genus Malus. The tree originated in Central Asia, where its wild ancestor,

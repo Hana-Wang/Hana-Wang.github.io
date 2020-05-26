@@ -1,8 +1,9 @@
 ---
 #layout: post
 title:  "Input/Output with files"
-description: An example post which shows code rendering.
+description: Input and Output operations on files.
 date:   2019-05-23 21:03:36 +0530
+author: Min Wang
 categories: "CPLUSFiles"
 ---
 
@@ -170,7 +171,7 @@ fin.seekg(location, ios::end);
 
 {% endhighlight %}
 
-<p>3. Reading/Writing operations on Binary files  </p>
+<p>4. Reading/Writing operations on Binary files  </p>
 <p> Reading and writing operations on binary files is performed by using the file stream member functions: write, read</p>
 <p> </p>
 <ul>
@@ -223,6 +224,17 @@ fin.read((char*) (& x), sizeof(int));
 
 </ul>
 
+<p>5. Reading/Writing operations on Text files  </p>
+<p> When opening a file using file stream, if the 'ios::binary' flag is not included in their opening mode, then the file stream we are using is text file stream.</p>
+<p> The reading and writing operations on text files are performed in the same way that we operated with cin (read from standard input stream)
+</p>
+<p> and cout (write to standard output stream). </p>
+<p> </p>
+
+
+
+
+
 
 <h2>Example projects on Github</h2>
 <p> </p>
@@ -255,7 +267,8 @@ change student "Jack" to "Mike", change "Jane 40" to "Grace 70",<br />
 
 <p> </p>
 
-<p> The corresponding source codes are named "binaryfilewrite.cpp", "binaryfileread.cpp" and "binaryfileRW.cpp".</p>
+<p> The corresponding source codes are named "binaryfilewrite.cpp", "binaryfileread.cpp" and "binaryfileRW.cpp". </p>
+<p> The programming test results are added in the end of the corresponding cpp files.</p>
 <br />
 <p>The source codes are available in Github, the repository
 <a href="https://github.com/Hana-Wang/File-Input-Output">

@@ -1,0 +1,16 @@
+I""<p> Generic Programming is that there is no specified data types when using algorithms. It means algorithm can apply to many types of data
+structures.</p>
+<p> </p>
+
+<p> Benefits: generic programming can reduce the repeating codes. </p>
+
+<p> </p>
+
+<p> There are two types of templates, one is Function Template, the other is Class Template</p>
+
+<h2>Function Templates VS Overloaded Functions </h2>
+<p>Overloaded Functions</p>
+<ul>
+<li> Overloaded functions are functions which have the same function name but have different parameters.</li>
+</ul>
+:ET
