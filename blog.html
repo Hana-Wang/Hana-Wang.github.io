@@ -44,7 +44,20 @@ xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
 
 <h2>C++</h2>
 
+<p> </p>
 
+<p>Input/Output with Files</p>
+
+<ul>
+
+  {% for post in site.categories.CPLUSFiles limit: 5 %}
+    <li>
+      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+
+</ul>
 
 <p>C++ Language</p>
 
@@ -131,11 +144,11 @@ xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
 
 
 <h2>Excel, Excel VBA</h2>
-<p>STemplate</p>
+<p>Javascript</p>
 
 <ul>
 
-  {% for post in site.categories.STemplate limit: 5 %}
+  {% for post in site.categories.CPLUSFiles limit: 5 %}
     <li>
       <p><a href="{{ post.url }}">{{ post.title }}</a></p>
       {{ post.excerpt }}

@@ -1,0 +1,170 @@
+I"Èf<p>Data can be stored in the form of files. Writing all data records into a file sequentially can form a sequential file. Sequential files are essentially sequential streams.</p>
+<p> </p>
+
+<h2>Concepts</h2>
+
+<p> </p>
+
+<p>In C++ standard library, there are mainly three stream classes, that is, ifstream, ofstream, fstream. These stream classes can be used to do reading and writing operation on the files, they can be called file stream classes.</p>
+<ul>
+<li>ifstream: read data from files; compared to reading/input data from standard input device(keyboard). </li>
+<li>ostream:  write data into files; compare to writing/output data from standard output device(computer </li> screen).
+<li>fstream:  read and/or write data from files.</li>
+</ul>
+
+<p> </p>
+
+<p>Their relations are shown in the screenshot below:</p>
+
+<p><a href="https://gyazo.com/cb218b166acecb6f3f21df43cd232d89"><img src="https://i.gyazo.com/cb218b166acecb6f3f21df43cd232d89.png" alt="Image from Gyazo" /></a></p>
+
+<h2>How is the input/output with files done?</h2>
+<p>1. Open files </p>
+<ul>
+    <li>
+      <p>Specify the file name and relate file stream object to the file by creating a ifstream / ofstream/ iofstream object.</p>
+    </li>
+    <li>
+      <p>Specify the way how you would like to use files; for example,</p>
+      <p> ios::out  ||  open for file output operation and replace the original data in the file </p>
+      <p> ios::in  ||  open for file input operation  </p>
+      <p> ios::binary ||  open the file in binary mode </p>
+      <p> ios::app  ||  open for file output operation and append the content to the current content of the file </p>
+      <p> ios::ate  ||  set the initial position at the end of the file. If it is not set, the initial position is at the beginning of the file. </p>
+      <p> ios::trunc  ||  if the opened file for output operations already existed, its previous content is deleted and replaced by the new one. </p>
+    </li>
+    <li>
+      <p>After opening a file by relating a stream object to a specified physical file, it is common to check conditions before using the file(read/write from/to a file). </p>
+    </li>
+</ul>
+
+<p> </p>
+
+<p>2. Read/Write files </p>
+<ul>
+    <li>
+      <p>Use a file stream pointer to identify the the current location of the element to be read and to write in the files.</p>
+    </li>
+    <li>
+      <p>Operation on files will happen where the stream pointer point to. </p>
+
+    </li>
+</ul>
+
+<p>3. Close files </p>
+<ul>
+    <li>
+      <p>After input and output operations on a file is finished, the file should be closed by calling the file stream object's member function 'close( )'.
+      </p>
+    </li>
+    <li>
+      <p> After that, the file stream object can be reused by another file, and the file can be available to be opened by relating to another file stream object.</p>
+    </li>
+</ul>
+
+<h2>Example Codes</h2>
+
+<p>1. Two ways of opening/creating a file using file stream</p>
+<ul>
+<li>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#include&lt;fstream&gt;</span>
+<span class="n">ofstream</span> <span class="n">outFile</span><span class="p">(</span><span class="s2">"client.dat"</span><span class="p">,</span> <span class="n">ios</span><span class="o">::</span><span class="n">out</span><span class="o">|</span><span class="n">ios</span><span class="o">::</span><span class="n">binary</span><span class="p">);</span>
+<span class="sr">//</span> <span class="no">Open</span> <span class="n">a</span> <span class="n">file</span> <span class="n">with</span> <span class="nb">name</span> <span class="s2">"client.dat"</span><span class="p">,</span> <span class="n">the</span> <span class="n">openning</span> <span class="n">mode</span>
+<span class="sr">//is</span> <span class="n">binary</span> <span class="n">and</span> <span class="nb">open</span> <span class="n">the</span> <span class="n">file</span> <span class="k">for</span> <span class="n">output</span> <span class="n">operation</span><span class="o">.</span></code></pre></figure>
+ </li>
+
+<li>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#include&lt;fstream&gt;</span>
+<span class="n">ofstream</span> <span class="n">outFile</span><span class="p">;</span>  <span class="sr">//</span><span class="n">declare</span> <span class="n">an</span> <span class="n">ofstream</span> <span class="n">object</span>
+<span class="n">outFile</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="s2">"client.dat"</span><span class="p">,</span> <span class="n">ios</span><span class="o">::</span><span class="n">out</span><span class="o">|</span><span class="n">ios</span><span class="o">::</span><span class="n">binary</span><span class="p">);</span>
+<span class="sr">//</span> <span class="n">call</span> <span class="n">memeber</span> <span class="n">function</span> <span class="nb">open</span> <span class="n">that</span> <span class="n">works</span> <span class="n">on</span> <span class="n">the</span> <span class="n">ofstream</span> <span class="n">object</span></code></pre></figure>
+ </li>
+
+</ul>
+
+<p>2. Codes relating to set up writing file stream pointer position before writing on files </p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">ofstream</span> <span class="n">fout</span><span class="p">(</span><span class="s2">"al.out"</span><span class="p">,</span> <span class="n">ios</span><span class="o">::</span><span class="n">app</span><span class="p">);</span>
+<span class="sr">//</span> <span class="n">define</span> <span class="n">an</span> <span class="n">ofstream</span> <span class="n">object</span> <span class="n">with</span> <span class="nb">name</span> <span class="s2">"fout"</span><span class="p">,</span> <span class="nb">open</span> <span class="n">a</span> <span class="n">file</span> <span class="n">with</span> <span class="n">the</span> <span class="nb">name</span> <span class="s2">"al.out"</span><span class="p">,</span>
+<span class="sr">//</span> <span class="nb">open</span> <span class="n">the</span> <span class="n">file</span> <span class="k">for</span> <span class="n">output</span> <span class="n">data</span> <span class="n">by</span> <span class="n">appending</span> <span class="n">the</span> <span class="n">content</span> <span class="n">to</span> <span class="n">the</span> <span class="n">current</span> <span class="n">content</span> <span class="n">of</span> <span class="n">the</span> <span class="n">file</span> <span class="s2">"al.out"</span>
+<span class="sr">//</span> <span class="n">here</span> <span class="n">using</span> <span class="n">the</span> <span class="n">relative</span> <span class="n">path</span><span class="p">,</span> <span class="n">the</span> <span class="n">file</span> <span class="n">al</span><span class="p">.</span><span class="nf">out</span> <span class="n">should</span> <span class="n">be</span> <span class="n">under</span> <span class="n">the</span> <span class="n">same</span> <span class="n">directory</span> <span class="n">as</span> <span class="n">the</span> <span class="n">cpp</span> <span class="n">file</span><span class="p">.</span>
+
+<span class="nf">long</span> <span class="n">location</span> <span class="o">=</span> <span class="n">fout</span><span class="p">.</span><span class="nf">tellp</span><span class="p">();</span>
+<span class="sr">//</span> <span class="n">member</span> <span class="n">function</span> <span class="n">tellp</span><span class="p">()</span> <span class="n">works</span> <span class="n">on</span> <span class="n">the</span> <span class="n">stream</span> <span class="n">object</span> <span class="s2">"fout"</span>
+<span class="sr">//</span> <span class="n">and</span> <span class="k">return</span> <span class="n">a</span> <span class="n">value</span> <span class="n">which</span> <span class="n">is</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">element</span> <span class="n">to</span> <span class="n">write</span><span class="p">,</span>
+<span class="sr">//</span> <span class="n">that</span> <span class="n">is</span><span class="p">,</span> <span class="n">the</span> <span class="n">value</span> <span class="n">is</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">file</span> <span class="n">writing</span> <span class="n">pointer</span>
+
+<span class="n">location</span> <span class="o">=</span> <span class="mi">10</span><span class="no">L</span><span class="p">;</span>
+<span class="sr">//</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">file</span> <span class="n">writing</span> <span class="n">pointer</span> <span class="n">can</span> <span class="n">be</span> <span class="n">assigned</span> <span class="n">a</span> <span class="n">constant</span> <span class="n">integer</span><span class="p">,</span> <span class="n">say</span><span class="p">,</span> <span class="mi">10</span>
+<span class="sr">//</span> <span class="n">labelled</span> <span class="n">using</span> <span class="no">L</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">the</span> <span class="n">integer</span> <span class="n">is</span> <span class="n">long</span><span class="p">.</span>
+
+<span class="nf">fout</span><span class="p">.</span><span class="nf">seekp</span><span class="p">(</span><span class="n">location</span><span class="p">);</span>
+<span class="sr">//</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">element</span> <span class="n">to</span> <span class="n">be</span> <span class="n">write</span> <span class="k">in</span> <span class="n">the</span> <span class="n">file</span> <span class="n">is</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"location"</span><span class="p">.</span>
+
+<span class="nf">fout</span><span class="p">.</span><span class="nf">seekp</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">ios</span><span class="o">::</span><span class="n">beg</span><span class="p">);</span>
+<span class="sr">//</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">file</span> <span class="n">writing</span> <span class="n">pointer</span> <span class="n">is</span> <span class="n">moved</span> <span class="n">to</span> <span class="n">the</span> <span class="n">location</span>
+<span class="sr">//</span> <span class="n">which</span> <span class="n">has</span> <span class="n">value</span> <span class="n">equal</span> <span class="n">to</span> <span class="p">[</span><span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"location"</span> <span class="o">+</span> <span class="n">ios</span><span class="o">::</span><span class="n">beg</span><span class="p">(</span><span class="n">the</span> <span class="n">beginning</span> <span class="n">position</span> <span class="n">of</span> <span class="n">the</span> <span class="n">file</span> <span class="s2">"al.out"</span><span class="p">)].</span>
+
+<span class="nf">fout</span><span class="p">.</span><span class="nf">seekp</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">ios</span><span class="o">::</span><span class="n">cur</span><span class="p">)</span>
+<span class="sr">//</span> <span class="n">set</span> <span class="n">up</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">file</span> <span class="n">stream</span> <span class="n">writing</span> <span class="n">pointer</span> <span class="n">to</span> <span class="n">a</span> <span class="n">location</span>
+<span class="sr">//</span> <span class="n">which</span> <span class="n">is</span> <span class="n">moved</span> <span class="n">from</span> <span class="n">the</span> <span class="n">current</span> <span class="n">position</span> <span class="n">by</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"location"</span>
+
+<span class="n">fout</span><span class="p">.</span><span class="nf">seekp</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">ios</span><span class="o">::</span><span class="k">end</span><span class="p">);</span>
+<span class="sr">//</span> <span class="n">set</span> <span class="n">up</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">file</span> <span class="n">stream</span> <span class="n">writing</span> <span class="n">pointer</span> <span class="n">to</span> <span class="n">a</span> <span class="n">location</span>
+<span class="sr">//</span> <span class="n">which</span> <span class="n">is</span> <span class="n">moved</span> <span class="n">from</span> <span class="n">the</span> <span class="n">ending</span> <span class="n">position</span> <span class="n">of</span> <span class="n">the</span> <span class="n">file</span> <span class="s2">"al.out"</span> <span class="n">an</span> <span class="n">offset</span><span class="p">(</span><span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"location"</span><span class="p">),</span>
+<span class="sr">//</span> <span class="k">then</span><span class="p">,</span> <span class="n">here</span><span class="p">,</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"loaction"</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">negative</span> <span class="n">value</span><span class="o">.</span></code></pre></figure>
+
+<p>3. Codes relating to set up reading file stream pointer position before reading from files </p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">ifstream</span> <span class="n">fin</span><span class="p">(</span><span class="s2">"al.in"</span><span class="p">,</span> <span class="n">ios</span><span class="o">::</span><span class="k">in</span><span class="p">);</span>
+<span class="sr">//</span> <span class="n">define</span> <span class="n">an</span> <span class="n">ifstream</span> <span class="n">object</span> <span class="n">with</span> <span class="n">the</span> <span class="nb">name</span> <span class="s2">"fin"</span> <span class="n">and</span> <span class="nb">open</span> <span class="n">a</span> <span class="n">file</span> <span class="n">with</span> <span class="n">the</span> <span class="nb">name</span> <span class="s2">"al.in"</span><span class="p">,</span>
+<span class="sr">//</span> <span class="nb">open</span> <span class="n">the</span> <span class="n">file</span> <span class="k">for</span> <span class="n">reading</span> <span class="n">data</span> <span class="n">from</span> <span class="n">the</span> <span class="n">file</span> <span class="s2">"al.in"</span><span class="p">,</span>
+<span class="sr">//</span> <span class="n">here</span> <span class="n">using</span> <span class="n">the</span> <span class="n">relative</span> <span class="n">path</span><span class="p">,</span> <span class="n">the</span> <span class="n">file</span> <span class="s2">"al.in"</span> <span class="n">should</span> <span class="n">be</span> <span class="n">under</span> <span class="n">the</span> <span class="n">same</span> <span class="n">directory</span> <span class="n">as</span> <span class="n">the</span> <span class="n">cpp</span> <span class="n">file</span><span class="p">.</span>
+
+<span class="nf">long</span> <span class="n">location</span> <span class="o">=</span> <span class="n">fin</span><span class="p">.</span><span class="nf">tellg</span><span class="p">();</span>
+<span class="sr">//</span> <span class="n">member</span> <span class="n">function</span> <span class="n">tellg</span><span class="p">()</span> <span class="n">works</span> <span class="n">on</span> <span class="n">the</span> <span class="n">stream</span> <span class="n">object</span> <span class="s2">"fin"</span>
+<span class="sr">//</span> <span class="n">and</span> <span class="k">return</span> <span class="n">a</span> <span class="n">value</span> <span class="n">which</span> <span class="n">is</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">element</span> <span class="n">to</span> <span class="n">read</span> <span class="n">from</span> <span class="n">the</span> <span class="n">file</span><span class="p">,</span>
+<span class="sr">//</span> <span class="n">that</span> <span class="n">is</span><span class="p">,</span> <span class="n">the</span> <span class="n">value</span> <span class="n">is</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">file</span> <span class="n">reading</span> <span class="n">pointer</span>
+
+<span class="n">location</span> <span class="o">=</span> <span class="mi">10</span><span class="no">L</span><span class="p">;</span>
+<span class="sr">//</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">file</span> <span class="n">reading</span> <span class="n">pointer</span> <span class="n">can</span> <span class="n">be</span> <span class="n">assigned</span> <span class="n">a</span> <span class="n">constant</span> <span class="n">integer</span><span class="p">,</span> <span class="n">say</span><span class="p">,</span> <span class="mi">10</span>
+<span class="sr">//</span> <span class="n">labelled</span> <span class="n">using</span> <span class="no">L</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">the</span> <span class="n">integer</span> <span class="n">is</span> <span class="n">long</span><span class="p">.</span>
+
+<span class="nf">fin</span><span class="p">.</span><span class="nf">seekg</span><span class="p">(</span><span class="n">location</span><span class="p">);</span>
+<span class="sr">//</span> <span class="n">setting</span> <span class="n">up</span> <span class="n">that</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">element</span> <span class="n">to</span> <span class="n">be</span> <span class="n">read</span> <span class="n">from</span> <span class="n">the</span> <span class="n">file</span> <span class="n">is</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"location"</span><span class="p">.</span>
+
+<span class="nf">fin</span><span class="p">.</span><span class="nf">seekg</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">ios</span><span class="o">::</span><span class="n">beg</span><span class="p">);</span>
+<span class="sr">//</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">file</span> <span class="n">writing</span> <span class="n">pointer</span> <span class="n">is</span> <span class="n">moved</span> <span class="n">to</span> <span class="n">a</span> <span class="n">position</span> <span class="n">from</span> <span class="n">the</span> <span class="n">begining</span> <span class="n">of</span> <span class="n">the</span> <span class="n">file</span> <span class="s2">""</span>
+<span class="sr">//</span> <span class="n">which</span> <span class="n">has</span> <span class="n">value</span> <span class="n">equal</span> <span class="n">to</span> <span class="p">[</span><span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"location"</span> <span class="o">+</span> <span class="n">ios</span><span class="o">::</span><span class="n">beg</span><span class="p">(</span><span class="n">the</span> <span class="n">beginning</span> <span class="n">position</span> <span class="n">of</span> <span class="n">the</span> <span class="n">file</span> <span class="s2">"al.out"</span><span class="p">)].</span>
+
+<span class="nf">fout</span><span class="p">.</span><span class="nf">seekg</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">ios</span><span class="o">::</span><span class="n">cur</span><span class="p">)</span>
+<span class="sr">//</span> <span class="n">set</span> <span class="n">up</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">file</span> <span class="n">stream</span> <span class="n">writing</span> <span class="n">pointer</span> <span class="n">to</span> <span class="n">a</span> <span class="n">location</span>
+<span class="sr">//</span> <span class="n">which</span> <span class="n">is</span> <span class="n">moved</span> <span class="n">from</span> <span class="n">the</span> <span class="n">current</span> <span class="n">position</span> <span class="n">by</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"location"</span>
+
+<span class="n">fout</span><span class="p">.</span><span class="nf">seekg</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">ios</span><span class="o">::</span><span class="k">end</span><span class="p">);</span>
+<span class="sr">//</span> <span class="n">set</span> <span class="n">up</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">file</span> <span class="n">stream</span> <span class="n">writing</span> <span class="n">pointer</span> <span class="n">to</span> <span class="n">a</span> <span class="n">location</span>
+<span class="sr">//</span> <span class="n">which</span> <span class="n">is</span> <span class="n">moved</span> <span class="n">from</span> <span class="n">the</span> <span class="n">ending</span> <span class="n">position</span> <span class="n">of</span> <span class="n">the</span> <span class="n">file</span> <span class="s2">"al.out"</span> <span class="n">an</span> <span class="n">offset</span><span class="p">(</span><span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"location"</span><span class="p">),</span>
+<span class="sr">//</span> <span class="k">then</span><span class="p">,</span> <span class="n">here</span><span class="p">,</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"loaction"</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">negative</span> <span class="n">value</span><span class="o">.</span></code></pre></figure>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">()</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello World</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam qui voluptatem excepturi nemo similique atque sapiente aperiam, dolorum deleniti! Esse quam perferendis temporibus nemo at molestias necessitatibus tenetur cupiditate sapiente. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et voluptatibus non labore officiis assumenda, distinctio perspiciatis blanditiis nesciunt rerum molestias impedit fugiat nulla qui libero minima quasi! Libero, iure.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span>
+	<span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Nunito Sans'</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+	<span class="nl">line-height</span><span class="p">:</span> <span class="m">1</span><span class="mi">.5em</span><span class="p">;</span>
+	<span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+	<span class="na">-webkit-font-smoothing</span><span class="p">:</span> <span class="n">antialiased</span><span class="p">;</span>
+	<span class="na">-moz-osx-font-smoothing</span><span class="p">:</span> <span class="n">grayscale</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam rerum, ratione impedit necessitatibus facere soluta odio repellat asperiores neque! Sunt iusto quia suscipit amet inventore eum, vel molestiae reiciendis alias.</p>
+:ET

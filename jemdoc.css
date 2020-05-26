@@ -1,4 +1,5 @@
 /* Default css file for jemdoc. */
+@import "vim.css";
 
 table#tlayout {
     border: none;
