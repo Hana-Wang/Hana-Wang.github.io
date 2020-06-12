@@ -29,6 +29,9 @@ Their relations are shown in the screenshot below:
 [![Image from Gyazo](https://i.gyazo.com/cb218b166acecb6f3f21df43cd232d89.png)](https://gyazo.com/cb218b166acecb6f3f21df43cd232d89)
 
 
+
+
+
 <h2>How is the input/output with files done?</h2>
 <p>1. Open files </p>
 <ul>
