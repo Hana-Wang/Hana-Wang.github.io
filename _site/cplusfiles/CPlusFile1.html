@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/jemdoc.css" type="text/css" />
+    <title>Polymorphism</title>
+  </head>
+
+
+
+  <body>
+    <table summary="Table for page layout." id="tlayout">
+    <tr valign="top">
+    <td id="layout-menu">
+    <div class="menu-category">Min Wang</div>
+    <div class="menu-item"><a href="/index.html" class="current">Home</a></div>
+    <div class="menu-item"><a href="/about.html">About</a></div>
+    <div class="menu-item"><a href="/research.html">Research</a></div>
+    <div class="menu-item"><a href="/teaching.html">Teaching</a></div>
+    <!--<div class="menu-category">Miscellaneous</div>-->
+    <div class="menu-item"><a href="/blog.html">Blog</a></div>
+
+    </td>
+
+
+    <td id="layout-content">
+    <div id="toptitle">
+
+    <h1>Polymorphism</h1>
+<hr>
+<p>23 May 2019 &ndash; By Min Wang</p>
+
+
+<p>In this blog, I will talk about my understanding of polymorphism in C++. Polymorphism allows objects belonging to different types to respond to a method call of the same name, according to type-specific behavior. The type-specific behavior is determined at run-time (called later binding or dynamic binding).</p>
+<!--
+<p>The Primary use of polymorphism in industry is the ability of
+objects belonging to different types to respond to method or
+property calls of the same name, each one according to
+an appropriate type-specific behavior.</p>!-->
+
+<p></p>
+
+<!--
+<p>The programmer does not have to know the exact type of the object
+in advance, and so the exact behavior is determined at run-time.
+(This is called later binding or dynamic binding.)</p>-->
+
+<p>There are typically two cases where polymorphism is used in C++. One is to use virtual functions. The other is to use abstract classes.</p>
+
+<p></p>
+
+<h2>In the first case, how to use virtual function in C++?</h2>
+<p>In the first case, how to use virtual function in C++?</p>
+
+<p></p>
+
+<p>Suppose there is a base class and a derived class from the base class. Inside the derived class, there is a function which is modified and derived from the base class. We would create a vector of base class objects and store both base class objects and derived class objects in the vector. When loop over the vector and call the function, we would like to make compiler look at the type of objects to call the function, not look at the type of the vector to determine what function to call.</p>
+
+<p></p>
+
+<p>Before using polymorphism; for example, we have an employee class as a base class and a manager class as a derived class. There is a same name function (called grossPay) with different code defined in the employee class and the manager class.
+We create a vector of base class. We store both employee objects and manager objects in the vector. We loop over the vector items and use the item to call their member function 'grossPay'. We want the compiler figure out at runtime the correct type of item objects it is calling the function for. This does not work before using polymorphism; the compiler looks at the type of the vector(employee) to determine what function to call, rather than the type of the objects(manager) to determine what function to call.
+</p>
+
+<p></p>
+
+<h2>How to implement polymorphism in Object-Oriented Programming?</h2>
+<p>How to implement polymorphism in Object-Oriented Programming?</p>
+
+<p></p>
+
+<p>To use polymorphism, we must make the function in question(grossPay) defined in the base class(employee class) a virtual function by typing the keyword 'virtual' before the return data type. It is not required but it is recommended that we make the function in question (grossPay) defined in the derived
+class(manager class) a virtual function. This would be easier for the code reader to read the code.  </p>
+
+<p></p>
+
+<p>Now, we have made the grossPay function virtual in both base class(employee class) and derived class. Next, we have to use pointers and need the vector is a vector of the base class pointers(employee pointers).
+</p>
+
+<p>
+Then, when calling the function, the compiler will look at the function(grossPay), know the function is virtual and determine which code to run based on the type of objects it comes across and stored in the vector(or variable), rather than the data type the vector(or variable) was declared as.
+</p>
+
+<p></p>
+
+<p>The advantages of the polymorphism is that by making the function in question in the base class polymorphic, we can then store objects of any types a base class and the derived class in a single container, and call the correct function for that object based on the type of object that it is. It makes the program much more flexible especially when we are dealing with objects of related classes.</p>
+
+<p></p>
+
+<p> The corresponding source codes are named "binaryfilewrite.cpp", "binaryfileread.cpp" and "binaryfileRW.cpp". </p>
+
+<p> The programming test results are added in the end of the corresponding cpp files.</p>
+
+<p>The source codes are available in Github, the repository
+<a href="https://github.com/Hana-Wang/File-Input-Output">
+ "File-Input-Output" .</a></p>
+
+<p></p>
+
+<h2>The other way to use polymorphism in C++ </h2>
+<p>The other way to use polymorphism in C++ is the idea of the abstract class.
+Many times when we working with polymorphism and inheritance, we want to create a class that cannot be instantiated, instead used as a base class and a model
+for all the derived classes.
+</p>
+
+<p></p>
+
+<p>A class that cannot be instantiated or will not be instantiated is called an abstract class. The abstract class is a class that has function declarations but not executable code in them.</p>
+
+<p></p>
+
+<p>For example, I can have a Shape class that is not a particular shape. Inside the class, there are a set of methods which are virtual function and can only be implemented with specific types of Shapes such as a draw function for a Circle or a draw function for a Square, rather than a draw function for a Shape.</p>
+
+<p></p>
+
+<h2>How to create abstract classes in C++?</h2>
+<p>How to create abstract classes in C++?</p>
+
+<p></p>
+
+<p>The technique is to make the base class abstract. This is done by creating a set of methods and make them all pure virtual functions by assigning an initializer of zero to the functions. In this way, the base class then becomes an abstract class. The compiler will report error when we try to instantiate the base class because the base class is an abstract class. </p>
+
+<p></p>
+
+<p>The way to use the abstract class is to create derived classes which are derived from the base class. In the derived classes, we have to implement all of the pure virtual functions defined in the base class. Each derived functions in the derived classes for these pure virtual functions will implement its own version of the function which is where polymorphism comes in. The compiler will understand the right version of the derived function at runtime according to different types of derived classes. </p>
+
+<p></p>
+
+<p> The corresponding source codes are named "binaryfilewrite.cpp", "binaryfileread.cpp" and "binaryfileRW.cpp". </p>
+
+<p> The programming test results are added in the end of the corresponding cpp files.</p>
+
+<p>The source codes are available in Github, the repository
+<a href="https://github.com/Hana-Wang/File-Input-Output">
+ "File-Input-Output" .</a></p>
+
+<p></p>
+
+<!--
+```javascript
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
+app.listen(3000)
+``` -->
+
+<!--
+```scss
+body {
+	font-family: 'Nunito Sans', sans-serif;
+	line-height: 1.5em;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+```
+-->
+
+
+<p> </p><p> </p>
+
+<hr>
+
+<p>
+
+<a href="/cplusfiles/Files.html" >Previous article</a>
+
+
+&nbsp &nbsp
+
+
+<a href="/cplusfiles/CPlusFile2.html" >Next article</a>
+
+
+</p>
+
+<!--and page.next.categories contains "blog"-->
+<!--
+<a href="/cplusfiles/Files.html" >Previous article</a>
+
+
+
+ &nbsp &nbsp
+
+
+<a href="/cplusfiles/CPlusFile2.html" >Next article</a>
+
+-->
+
+
+  </td>
+  </tr>
+  </table>
+
+  </body>
+
+</html>

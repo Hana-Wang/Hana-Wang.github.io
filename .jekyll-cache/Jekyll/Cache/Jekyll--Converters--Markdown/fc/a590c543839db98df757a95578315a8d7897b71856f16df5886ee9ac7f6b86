@@ -1,0 +1,130 @@
+I"Ö<p>In this blog, I will talk about the concept of Exception Handling.</p>
+
+<p></p>
+<h2>Concepts</h2>
+<p>Errors in a program is also called exceptions. Exception Handling is very necessary if you want to avoid the error to cause a program crash. For example, if divide a number by a zero value, it will lead the program stop working and crash. We can handle exceptions usually by try and catch statements </p>
+
+<p></p>
+
+<p>There are two ways of handling exceptions. One way is to define an error(exception) to be a global constant value. The other way is to define
+an exception class which can be a derived class based on one of the
+standard C++ exceptions. In the second way, we need to bring in a header file,
+using '#include<stdexcept>', '<stdexcept>' stands for the standard exception header in C++. &lt;/p&gt;
+
+<p></p>
+<h2>How to deal with the exception handling in C++?</h2>
+<p>How to use the try and catch block to deal with the exception handling in C++?</p>
+
+<p></p>
+<h2>The First Way</h2>
+<p>In the first way;
+1st, create a global constant value to define an error, the value can be any number.
+2nd, to keep the error from occurring, we put the code that we believe can lead to an error inside the try block. Inside try, if the error happens, we throw the error(exception), else, we do the normal code.  
+3rd, below the try block, we use catch block. Before entering the inside of the catch block, catch can take an argument which is passed in the exception thrown. Inside the catch block, if the argument equals to the defined global error(exception), then we can report the error warning for user by displaying the error information in the screen. Normally, it is good to write the errors using 'cerr', not write the errors to the standard output using 'cout'.
+</p>
+
+<p></p>
+
+<p>In this way, we test the error, throw the error exception, catch the exception and report the error information to user. This is the overview of how exception handling works. It makes us not crash the program when running a program.</p>
+
+<p></p>
+
+
+<p> The corresponding source codes are named "binaryfilewrite.cpp", "binaryfileread.cpp" and "binaryfileRW.cpp". </p>
+
+<p> The programming test results are added in the end of the corresponding cpp files.</p>
+
+
+<p>The source codes are available in Github, the repository
+<a href="https://github.com/Hana-Wang/File-Input-Output">
+ "File-Input-Output" .</a></p>
+
+
+<p></p>
+
+<h2>The Second Way</h2>
+<p>The other proper way to throw exceptions is by creating an exception class which can be derived from one of the standard C++ exceptions, say, runtime_error. In this case, we have to use processor code;
+"#include<stdexcept>".&lt;/p&gt;
+
+<p></p>
+
+<p>In the second way;
+1st, bring in a header file in the program by adding '#include<stdexcept>'.
+2nd, create an exception class to define an error. The exception class is a derived class that inherits on one of the standard C++ exceptions; say, runtime_error, we can also look up the C++ reference what the other standard exceptions are.
+Inside the class, the constructor is defined as a call the constructor for the base class(one of the standard C++ exceptions), in this call of the base class constructor, a customized message is passed in, which we want to be displayed for user when the error happens. When the exception object is called, it is thrown, the message will be displayed and the user will know what is wrong.
+3rd, to keep the error from occurring, we put the code that we believe can lead to an error inside a try block. Here, we can enclose the code in a function. Inside the function, if the error happens, we throw the exception object, else, we return the calculated value in the function. Then, we put a possible exception causing statement, which is the call of the function, in the try block.
+4th, below the try block, we use catch block to catch the exception object that has been thrown. Before entering the inside of the catch block, catch can take
+an argument which can be passed in the thrown exception object, so the catch argument is declared as the exception object reference. Inside the catch block,
+the exception object is stored in the object reference variable, and then call the member function 'what()' derived from the base standard exception class. The function 'what()' returns the argument passed in the exception class constructor function definition. The exception constructor is defined through calls of the standard exception base class and passing of the customized message argument.
+Using the calls of the 'what()'' function, we display the customized message to users in the catch code block.
+&lt;/p&gt;
+
+<p></p>
+
+<p>We want the error exception to occur when the error happens so that the program does not crash. You never ever want a program to crash, you always want to try to handle error exceptions in a program. Sometimes, we would like to give the user the opportunity to correct their input errors, we can put these codes handling error exceptions in a loop and set a termination value.
+</p>
+
+
+<p></p>
+<h2>The other ways</h2>
+<p>There are situations where we might have more than one exception to catch.</p>
+<p>In these situations, you can have multiple catches that you can make.</p>
+There can be situations, especially for large programs, where you cannot possibly know all the exceptions that can occur and you need to catch
+exceptions without knowing what exactly they are. The way to do it is to
+use 'catch(...){}' where the ellipsis is the argument to the catch statement.
+
+Inside the catch statement, we can warn user that an exception was thrown
+and it was caught in our catch all catch statement.
+If you know exactly what exceptions will be thrown, you do not need to use
+the catch all catch statement.
+
+In a large program, normally there will be a series of different specific
+catches for all of the exceptions you know can be thrown, and at the end of
+the series of catch statements, there can be one more catch all catch statement,
+where it is to catch any exceptions that were left out of the specific catch list.
+&lt;/p&gt;
+
+
+<p></p>
+
+<p> The corresponding source codes are named "binaryfilewrite.cpp", "binaryfileread.cpp" and "binaryfileRW.cpp". </p>
+
+<p> The programming test results are added in the end of the corresponding cpp files.</p>
+
+
+<p>The source codes are available in Github, the repository
+<a href="https://github.com/Hana-Wang/File-Input-Output">
+ "File-Input-Output" .</a></p>
+
+
+<p></p>
+
+
+
+<!--
+```javascript
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
+app.listen(3000)
+``` -->
+
+
+
+<!--
+```scss
+body {
+	font-family: 'Nunito Sans', sans-serif;
+	line-height: 1.5em;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+```
+-->
+</stdexcept></p></stdexcept></p></stdexcept></stdexcept></p>
+:ET

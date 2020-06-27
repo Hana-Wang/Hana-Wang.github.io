@@ -1,0 +1,317 @@
+---
+#layout: post
+title:  "inheritance"
+description: This is one blog for CPlus knowledge.
+date:   2019-05-23 21:03:36 +0530
+author: Min Wang
+categories: "CPLUSFiles"
+---
+
+
+<p>In this blog, I will talk about the concept of inheritance. I plays an important role in Object-Oriented Programming. It allows us to build classes and reuse the class in the definition of another class. Often use a term called
+specialization. We have a class called motor vehicle. we decide we want
+a specialization: a car or automobile class. Or later on we might a truck class which is again a specialization of motor vehicle. Using inheritance allow us
+to reuse codes, because a specialization of an original class(a base class) can use the code from the base class over and over again. Since it is common to all the classes, and we can define once and reuse it again in a specialization class(a derived class)</p>
+
+<p>Compiling means taking the source code as it is in C++ and translating into
+a machine language to give a resulting executable file. A namespace is a set of logical group of a set of libraries.</p>
+
+<p>The programmer does not have to know the exact type of the object
+in advance, and so the exact behavior is determined at run-time.
+(This is called later binding or dynamic binding.)</p>
+
+<h2>Example1</h2>
+
+
+
+<h2>Concepts</h2>
+
+<p> </p>
+
+<p>In C++ standard library, there are mainly three stream classes, that is, ifstream, ofstream, fstream. These stream classes can be used to do reading and writing operation on the files, they can be called file stream classes.</p>
+<ul>
+<li>ifstream: read data from files; compared to reading/input data from standard input device(keyboard). </li>
+<li>ostream:  write data into files; compare to writing/output data from standard output device(computer </li> screen).
+<li>fstream:  read and/or write data from files.</li>
+</ul>
+
+<p> </p>
+
+Their relations are shown in the screenshot below:
+
+[![Image from Gyazo](https://i.gyazo.com/cb218b166acecb6f3f21df43cd232d89.png)](https://gyazo.com/cb218b166acecb6f3f21df43cd232d89)
+
+
+
+
+
+<h2>How is the input/output with files done?</h2>
+<p>1. Open files </p>
+<ul>
+    <li>
+      <p>Specify the file name and relate file stream object to the file by creating a ifstream / ofstream/ iofstream object.</p>
+    </li>
+    <li>
+      <p>Specify the way how you would like to use files; for example,</p>
+      <p> ios::out  ||  open for file output operation and replace the original data in the file </p>
+      <p> ios::in  ||  open for file input operation  </p>
+      <p> ios::binary ||  open the file in binary mode </p>
+      <p> ios::app  ||  open for file output operation and append the content to the current content of the file </p>
+      <p> ios::ate  ||  set the initial position at the end of the file. If it is not set, the initial position is at the beginning of the file. </p>
+      <p> ios::trunc  ||  if the opened file for output operations already existed, its previous content is deleted and replaced by the new one. </p>
+    </li>
+    <li>
+      <p>After opening a file by relating a stream object to a specified physical file, it is common to check conditions before using the file(read/write from/to a file). </p>
+    </li>
+</ul>
+
+<p> </p>
+
+<p>2. Read/Write files </p>
+<ul>
+    <li>
+      <p>Use a file stream pointer to identify the the current location of the element to be read and to write in the files.</p>
+    </li>
+    <li>
+      <p>Operation on files will happen where the stream pointer point to. </p>
+
+    </li>
+</ul>
+
+<p>3. Close files </p>
+<ul>
+    <li>
+      <p>After input and output operations on a file is finished, the file should be closed by calling the file stream object's member function 'close( )'.
+      </p>
+    </li>
+    <li>
+      <p> After that, the file stream object can be reused by another file, and the file can be available to be opened by relating to another file stream object.</p>
+    </li>
+</ul>
+
+<h2>Example Codes</h2>
+
+<p>1. Two ways of opening/creating a file using file stream</p>
+<ul>
+<li>{% highlight ruby %}
+#include<fstream>
+ofstream outFile("client.dat", ios::out|ios::binary);
+// Open a file with name "client.dat", the openning mode
+//is binary and open the file for output operation.
+
+{% endhighlight %} </li>
+
+<li>{% highlight ruby %}
+#include<fstream>
+ofstream outFile;  //declare an ofstream object
+outFile.open("client.dat", ios::out|ios::binary);
+// call memeber function open that works on the ofstream object
+
+{% endhighlight %} </li>
+
+</ul>
+
+
+
+
+<p>2. Codes relating to set up writing file stream pointer position before writing on files </p>
+
+{% highlight ruby %}
+ofstream fout("al.out", ios::app);
+// define an ofstream object with name "fout", open a file with the name "al.out",
+// open the file for output data by appending the content to the current content of the file "al.out"
+// here using the relative path, the file al.out should be under the same directory as the cpp file.
+
+long location = fout.tellp();
+// member function tellp() works on the stream object "fout"
+// and return a value which is the current location of the element to write,
+// that is, the value is the current location of file writing pointer
+
+location = 10L;
+// the current location of file writing pointer can be assigned a constant integer, say, 10
+// labelled using L to indicate the integer is long.
+
+fout.seekp(location);
+// the current location of the element to be write in the file is the value of "location".
+
+fout.seekp(location, ios::beg);
+// the current location of file writing pointer is moved to the location
+// which has value equal to [the value of "location" + ios::beg(the beginning position of the file "al.out")].
+
+fout.seekp(location, ios::cur)
+// set up the current location of file stream writing pointer to a location
+// which is moved from the current position by the value of "location"
+
+fout.seekp(location, ios::end);
+// set up the current location of file stream writing pointer to a location
+// which is moved from the ending position of the file "al.out" by an offset(the value of "location"),
+// then, here, the value of "loaction" can be a negative value.
+
+
+{% endhighlight %}
+
+
+<p>3. Codes relating to set up reading file stream pointer position before reading from files </p>
+
+{% highlight ruby %}
+
+ifstream fin("al.in", ios::in);
+// define an ifstream object with the name "fin" and open a file with the name "al.in",
+// open the file for reading data from the file "al.in",
+// here using the relative path, the file "al.in" should be under the same directory as the cpp file.
+
+long location = fin.tellg();
+// member function tellg() works on the stream object "fin"
+// and return a value which is the current location of the element to read from the file,
+// that is, the value is the current location of file reading pointer
+
+location = 10L;
+// the current location of file reading pointer can be assigned a constant integer, say, 10
+// labelled using L to indicate the integer is long.
+
+fin.seekg(location);
+// setting up that the current location of the element to be read from the file is the value of "location".
+
+fin.seekg(location, ios::beg);
+// the current location of file reading pointer is moved to a position which is found from the begining position in the file "al.in" and an offset value of "location".
+
+fin.seekg(location, ios::cur)
+// set up the current location of file stream reading pointer to a location
+// which is moved from the current position by the value of "location"
+
+fin.seekg(location, ios::end);
+// set up the current location of file stream reading pointer to a location
+// which is moved from the ending position of the file "al.in" by an offset(the value of "location"),
+// then, here, the value of "loaction" can be a negative value.
+
+
+{% endhighlight %}
+
+<p>4. Reading/Writing operations on Binary files  </p>
+<p> Reading and writing operations on binary files is performed by using the file stream member functions: write, read</p>
+<p> </p>
+<ul>
+
+<li>
+<p>Syntax</p>
+{% highlight ruby %}
+write((char*) block, sizeof(block) );
+read((char*) block, sizeof(block) );
+{% endhighlight %}
+</li>
+
+
+
+<li>
+<p>Writing operation on binary files</p>
+{% highlight ruby %}
+int x =11;
+ofstream fout("client.dat", ios::output|ios::binary);
+// Open a file with name "client.dat", the openning mode
+//is binary and open the file for output operation.
+
+fout.seekp(20, ios::beg);
+// find file writing pointer which is moved from beginning position by 20 bytes.
+
+fout.write((char*) (& x), sizeof(int));
+//write the integer x in the form of string, with sizeof(int)
+
+
+{% endhighlight %} </li>
+
+<li>
+<p>Reading operation on binary files</p>
+
+{% highlight ruby %}
+int x =11;
+ifstream fin("client.dat", ios::input|ios::binary);
+// Open a file with name "client.dat", the openning mode
+//is binary and open the file for input operation.
+
+fin.seekg(0, ios::beg);
+// Setting the file reading pointer position to be the beginning position of the file
+// (because the offset position value is 0)
+
+fin.read((char*) (& x), sizeof(int));
+// from the beginning position of the file stream "fin",
+// read the integer x in the form of string, with sizeof(int)
+
+{% endhighlight %} </li>
+
+</ul>
+
+<p>5. Reading/Writing operations on Text files  </p>
+<p> When opening a file using file stream, if the 'ios::binary' flag is not included in their opening mode, then the file stream we are using is text file stream.</p>
+<p> The reading and writing operations on text files are performed in the same way that we operated with cin (read from standard input stream)
+</p>
+<p> and cout (write to standard output stream). </p>
+<p> </p>
+
+
+
+
+
+
+<h2>Example projects on Github</h2>
+<p> </p>
+<p>Three examples of tasks regarding the input/output operations on binary files are illustrated. </p>
+<ul>
+
+<p> </p>
+<li>
+<p>Task1: input scores and names of students from keyboard,
+and
+store these data in a binary file with the name "students.dat".
+</p></li>
+
+<p> </p>
+<li>
+<p>Task2: read the students data from the file "students.dat", and
+output these data to the screen.
+</p>
+</li>
+
+<p> </p>
+<li>
+<p>Task3: modify some students data from the file "students.dat", and
+change student "Jack" to "Mike", change "Jane 40" to "Grace 70",<br />
+ and output the students data to the standard output device.
+</p>
+</li>
+</ul>
+
+
+<p> </p>
+
+<p> The corresponding source codes are named "binaryfilewrite.cpp", "binaryfileread.cpp" and "binaryfileRW.cpp". </p>
+<p> The programming test results are added in the end of the corresponding cpp files.</p>
+<br />
+<p>The source codes are available in Github, the repository
+<a href="https://github.com/Hana-Wang/File-Input-Output">
+ "File-Input-Output" .</a></p>
+
+<!--
+```javascript
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
+app.listen(3000)
+``` -->
+
+
+
+<!--
+```scss
+body {
+	font-family: 'Nunito Sans', sans-serif;
+	line-height: 1.5em;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+```
+-->

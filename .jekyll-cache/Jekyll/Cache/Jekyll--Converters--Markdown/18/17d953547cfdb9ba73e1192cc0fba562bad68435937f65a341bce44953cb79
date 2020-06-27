@@ -1,0 +1,7 @@
+I"%<p>In this blog, I will talk about my understanding of polymorphism in C++. Polymorphism allows objects belonging to different types to respond to a method call of the same name, according to type-specific behavior. The type-specific behavior is determined at run-time (called later binding or dynamic binding).</p>
+<!--
+<p>The Primary use of polymorphism in industry is the ability of
+objects belonging to different types to respond to method or
+property calls of the same name, each one according to
+an appropriate type-specific behavior.</p>!-->
+:ET
