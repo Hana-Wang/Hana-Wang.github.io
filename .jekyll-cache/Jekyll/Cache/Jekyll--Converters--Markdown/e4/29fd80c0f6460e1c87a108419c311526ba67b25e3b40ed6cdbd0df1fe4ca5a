@@ -1,105 +1,9 @@
-I"|”<p>In this blog, I will talk about my understanding of polymorphism in C++. Polymorphism allows objects belonging to different types to respond to a method call of the same name, according to type-specific behavior. The type-specific behavior is determined at run-time (called later binding or dynamic binding).</p>
-<!--
-<p>The Primary use of polymorphism in industry is the ability of
-objects belonging to different types to respond to method or
-property calls of the same name, each one according to
-an appropriate type-specific behavior.</p>!-->
+I"V|<p>In this blog, I will talk about the concept of inheritance.
 
-<p></p>
-
-<!--
-<p>The programmer does not have to know the exact type of the object
-in advance, and so the exact behavior is determined at run-time.
-(This is called later binding or dynamic binding.)</p>-->
-
-<p>There are typically two cases where polymorphism is used in C++. One is to use virtual functions. The other is to use abstract classes.</p>
-
-<p></p>
-
-<p>In the first case, how to use virtual function in C++?</p>
-
-<p></p>
-
-<p>Suppose there is a base class and a derived class from the base class. Inside the derived class, there is a function which is modified and derived from the base class. We would create a vector of base class objects and store both base class objects and derived class objects in the vector. When loop over the vector and call the function, we would like to make compiler look at the type of objects to call the function, not look at the type of the vector to determine what function to call.</p>
-
-<p></p>
-
-<p>Before using polymorphism; for example, we have an employee class as a base class and a manager class as a derived class. There is a same name function (called grossPay) with different code defined in the employee class and the manager class.
-We create a vector of base class. We store both employee objects and manager objects in the vector. We loop over the vector items and use the item to call their member function 'grossPay'. We want the compiler figure out at runtime the correct type of item objects it is calling the function for. This does not work before using polymorphism; the compiler looks at the type of the vector(employee) to determine what function to call, rather than the type of the objects(manager) to determine what function to call.
-</p>
-
-<p></p>
-
-<p>How to implement polymorphism in Object-Oriented Programming?</p>
-
-<p></p>
-
-<p>To use polymorphism, we must make the function in question(grossPay) defined in the base class(employee class) a virtual function by typing the keyword 'virtual' before the return data type. It is not required but it is recommended that we make the function in question (grossPay) defined in the derived
-class(manager class) a virtual function. This would be easier for the code reader to read the code.  </p>
-
-<p></p>
-
-<p>Now, we have made the grossPay function virtual in both base class(employee class) and derived class. Next, we have to use pointers and need the vector is a vector of the base class pointers(employee pointers).
-</p>
-
-<p>
-Then, when calling the function, the compiler will look at the function(grossPay), know the function is virtual and determine which code to run based on the type of objects it comes across and stored in the vector(or variable), rather than the data type the vector(or variable) was declared as.
-</p>
-
-<p></p>
-
-<p>The advantages of the polymorphism is that by making the function in question in the base class polymorphic, we can then store objects of any types a base class and the derived class in a single container, and call the correct function for that object based on the type of object that it is. It makes the program much more flexible especially when we are dealing with objects of related classes.</p>
-
-<p></p>
-
-<p> The corresponding source codes are named "binaryfilewrite.cpp", "binaryfileread.cpp" and "binaryfileRW.cpp". </p>
-
-<p> The programming test results are added in the end of the corresponding cpp files.</p>
-
-<p>The source codes are available in Github, the repository
-<a href="https://github.com/Hana-Wang/File-Input-Output">
- "File-Input-Output" .</a></p>
-
-<p></p>
-
-<p>The other way to use polymorphism in C++ is the idea of the abstract class.
-Many times when we working with polymorphism and inheritance, we want to create a class that cannot be instantiated, instead used as a base class and a model
-for all the derived classes.
-</p>
-
-<p></p>
-
-<p>A class that cannot be instantiated or will not be instantiated is called an abstract class. The abstract class is a class that has function declarations but not executable code in them.</p>
-
-<p></p>
-
-<p>For example, I can have a Shape class that is not a particular shape. Inside the class, there are a set of methods which are virtual function and can only be implemented with specific types of Shapes such as a draw function for a Circle or a draw function for a Square, rather than a draw function for a Shape.</p>
-
-<p></p>
-
-<p>How to create abstract classes in C++?</p>
-
-<p></p>
-
-<p>The technique is to make the base class abstract. This is done by creating a set of methods and make them all pure virtual functions by assigning an initializer of zero to the functions. In this way, the base class then becomes an abstract class. The compiler will report error when we try to instantiate the base class because the base class is an abstract class. </p>
-
-<p></p>
-
-<p>The way to use the abstract class is to create derived classes which are derived from the base class. In the derived classes, we have to implement all of the pure virtual functions defined in the base class. Each derived functions in the derived classes for these pure virtual functions will implement its own version of the function which is where polymorphism comes in. The compiler will understand the right version of the derived function at runtime according to different types of derived classes. </p>
-
-<p></p>
-
-<p> The corresponding source codes are named "binaryfilewrite.cpp", "binaryfileread.cpp" and "binaryfileRW.cpp". </p>
-
-<p> The programming test results are added in the end of the corresponding cpp files.</p>
-
-<p>The source codes are available in Github, the repository
-<a href="https://github.com/Hana-Wang/File-Input-Output">
- "File-Input-Output" .</a></p>
-
-<p></p>
 
 <h2>Example1</h2>
+
+
 
 <h2>Concepts</h2>
 
@@ -114,9 +18,13 @@ for all the derived classes.
 
 <p> </p>
 
-<p>Their relations are shown in the screenshot below:</p>
+Their relations are shown in the screenshot below:
 
-<p><a href="https://gyazo.com/cb218b166acecb6f3f21df43cd232d89"><img src="https://i.gyazo.com/cb218b166acecb6f3f21df43cd232d89.png" alt="Image from Gyazo" /></a></p>
+[![Image from Gyazo](https://i.gyazo.com/cb218b166acecb6f3f21df43cd232d89.png)](https://gyazo.com/cb218b166acecb6f3f21df43cd232d89)
+
+
+
+
 
 <h2>How is the input/output with files done?</h2>
 <p>1. Open files </p>
@@ -182,7 +90,11 @@ for all the derived classes.
 
 </ul>
 
+
+
+
 <p>2. Codes relating to set up writing file stream pointer position before writing on files </p>
+
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">ofstream</span> <span class="n">fout</span><span class="p">(</span><span class="s2">"al.out"</span><span class="p">,</span> <span class="n">ios</span><span class="o">::</span><span class="n">app</span><span class="p">);</span>
 <span class="sr">//</span> <span class="n">define</span> <span class="n">an</span> <span class="n">ofstream</span> <span class="n">object</span> <span class="n">with</span> <span class="nb">name</span> <span class="s2">"fout"</span><span class="p">,</span> <span class="nb">open</span> <span class="n">a</span> <span class="n">file</span> <span class="n">with</span> <span class="n">the</span> <span class="nb">name</span> <span class="s2">"al.out"</span><span class="p">,</span>
@@ -214,7 +126,10 @@ for all the derived classes.
 <span class="sr">//</span> <span class="n">which</span> <span class="n">is</span> <span class="n">moved</span> <span class="n">from</span> <span class="n">the</span> <span class="n">ending</span> <span class="n">position</span> <span class="n">of</span> <span class="n">the</span> <span class="n">file</span> <span class="s2">"al.out"</span> <span class="n">by</span> <span class="n">an</span> <span class="n">offset</span><span class="p">(</span><span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"location"</span><span class="p">),</span>
 <span class="sr">//</span> <span class="k">then</span><span class="p">,</span> <span class="n">here</span><span class="p">,</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"loaction"</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">negative</span> <span class="n">value</span><span class="o">.</span></code></pre></figure>
 
+
+
 <p>3. Codes relating to set up reading file stream pointer position before reading from files </p>
+
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">ifstream</span> <span class="n">fin</span><span class="p">(</span><span class="s2">"al.in"</span><span class="p">,</span> <span class="n">ios</span><span class="o">::</span><span class="k">in</span><span class="p">);</span>
 <span class="sr">//</span> <span class="n">define</span> <span class="n">an</span> <span class="n">ifstream</span> <span class="n">object</span> <span class="n">with</span> <span class="n">the</span> <span class="nb">name</span> <span class="s2">"fin"</span> <span class="n">and</span> <span class="nb">open</span> <span class="n">a</span> <span class="n">file</span> <span class="n">with</span> <span class="n">the</span> <span class="nb">name</span> <span class="s2">"al.in"</span><span class="p">,</span>
@@ -244,6 +159,7 @@ for all the derived classes.
 <span class="sr">//</span> <span class="n">set</span> <span class="n">up</span> <span class="n">the</span> <span class="n">current</span> <span class="n">location</span> <span class="n">of</span> <span class="n">file</span> <span class="n">stream</span> <span class="n">reading</span> <span class="n">pointer</span> <span class="n">to</span> <span class="n">a</span> <span class="n">location</span>
 <span class="sr">//</span> <span class="n">which</span> <span class="n">is</span> <span class="n">moved</span> <span class="n">from</span> <span class="n">the</span> <span class="n">ending</span> <span class="n">position</span> <span class="n">of</span> <span class="n">the</span> <span class="n">file</span> <span class="s2">"al.in"</span> <span class="n">by</span> <span class="n">an</span> <span class="n">offset</span><span class="p">(</span><span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"location"</span><span class="p">),</span>
 <span class="sr">//</span> <span class="k">then</span><span class="p">,</span> <span class="n">here</span><span class="p">,</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">"loaction"</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">negative</span> <span class="n">value</span><span class="o">.</span></code></pre></figure>
+
 
 <p>4. Reading/Writing operations on Binary files  </p>
 <p> Reading and writing operations on binary files is performed by using the file stream member functions: write, read</p>
@@ -302,6 +218,11 @@ for all the derived classes.
 <p> and cout (write to standard output stream). </p>
 <p> </p>
 
+
+
+
+
+
 <h2>Example projects on Github</h2>
 <p> </p>
 <p>Three examples of tasks regarding the input/output operations on binary files are illustrated. </p>
@@ -330,11 +251,12 @@ change student "Jack" to "Mike", change "Jane 40" to "Grace 70",<br />
 </li>
 </ul>
 
+
 <p> </p>
 
 <p> The corresponding source codes are named "binaryfilewrite.cpp", "binaryfileread.cpp" and "binaryfileRW.cpp". </p>
 <p> The programming test results are added in the end of the corresponding cpp files.</p>
-<p><br /></p>
+<br />
 <p>The source codes are available in Github, the repository
 <a href="https://github.com/Hana-Wang/File-Input-Output">
  "File-Input-Output" .</a></p>
@@ -351,6 +273,8 @@ app.get('/', function (req, res) {
 app.listen(3000)
 ``` -->
 
+
+
 <!--
 ```scss
 body {
@@ -362,4 +286,5 @@ body {
 }
 ```
 -->
+</p>
 :ET
