@@ -28,8 +28,9 @@ Their relations are shown in the screenshot below:
 
 [![Image from Gyazo](https://i.gyazo.com/cb218b166acecb6f3f21df43cd232d89.png)](https://gyazo.com/cb218b166acecb6f3f21df43cd232d89)
 
+[![Image from Gyazo](https://i.gyazo.com/d9b35ab8794a9eda1526963dc66e7d58.png)](https://gyazo.com/d9b35ab8794a9eda1526963dc66e7d58)
 
-
+[![Image from Gyazo](https://i.gyazo.com/c08539864f85b55d39c5b6abde1f89a8.png)](https://gyazo.com/c08539864f85b55d39c5b6abde1f89a8)
 
 
 <h2>How is the input/output with files done?</h2>
