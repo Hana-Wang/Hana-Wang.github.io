@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>Learning Notes-2-AWS Data Engineer Associate | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="– Understanding Streaming Ingestion and Batch Ingestion—What is Streaming Ingestion? Streaming Ingestion is a method of continuously collecting and processing data as it is generated in real-time;  —W">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learning Notes-2-AWS Data Engineer Associate">
+<meta property="og:url" content="http://example.com/2024/11/21/AWS-Learning-Notes-2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="– Understanding Streaming Ingestion and Batch Ingestion—What is Streaming Ingestion? Streaming Ingestion is a method of continuously collecting and processing data as it is generated in real-time;  —W">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-11-21T20:51:53.000Z">
+<meta property="article:modified_time" content="2024-11-21T21:10:57.605Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="AWS-Data-Engineer-Associate">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -67,109 +72,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Database-Concept-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/11/21/Database-Concept-1/" class="article-date">
-  <time class="dt-published" datetime="2024-11-21T20:53:02.000Z" itemprop="datePublished">2024-11-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/11/21/Database-Concept-1/">Database concepts-1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="—-What-is-Database-What-is-a-language-used-to-interact-with-Database"><a href="#—-What-is-Database-What-is-a-language-used-to-interact-with-Database" class="headerlink" title="—-What is Database? What is a language used to interact with Database?"></a>—-What is Database? What is a language used to interact with Database?</h2><ul>
-<li><p>Database is a way of storing and organising data electronically. </p>
-</li>
-<li><p>Relational database is a database where data is organised into tables where related data is stored in rows and columns. Relationships can be defined between tables inside the database. It has some similarity with spreadsheet applications which also organise data in the forms of rows and columns. </p>
-</li>
-<li><p>However, database can be more poweful. Database can store much more data. Once the data is stored inside the database, many users can write queries together to gather insights from the database at the same time. In addition, database can be secured with encryption.</p>
-</li>
-<li><p>One most common language, used for creating, querying  and updating relational databases,  is called SQL, structured query language.</p>
-</li>
-</ul>
-<h2 id="—-Understanding-how-data-is-organised-inside-a-database"><a href="#—-Understanding-how-data-is-organised-inside-a-database" class="headerlink" title="—-Understanding how data is organised inside a database"></a>—-Understanding how data is organised inside a database</h2><h3 id="—-What-are-tables-inside-a-database"><a href="#—-What-are-tables-inside-a-database" class="headerlink" title="—-What are tables inside a database?"></a>—-What are tables inside a database?</h3><ul>
-<li><p>The main building block of databases are tables; Database is organised into tables, which hold related data about a particular subject&#x2F;entity. </p>
-</li>
-<li><p>Tables are organised into rows and columns. Rows are often referred to as records. Columns are referred to as fields. </p>
-</li>
-<li><p>A table’s fields are limited to a specific set when the database was created. But the number of rows is unlimited.</p>
-</li>
-</ul>
-<h4 id="—-Table-Naming"><a href="#—-Table-Naming" class="headerlink" title="—-Table Naming"></a>—-Table Naming</h4><ul>
-<li><p>lowercase, not include spaces. Use underscores in place of spaces. </p>
-</li>
-<li><p>A table name refer to a collective group. Like inventory, but it is also okay for the table to have a plural name such as “products”</p>
-</li>
-</ul>
-<hr>
-<h4 id="—-Record"><a href="#—-Record" class="headerlink" title="—-Record"></a>—-Record</h4><ul>
-<li>A record is a row in a table; it holds data on an individual entity observation</li>
-<li>For example, a ‘products’ table has a number of records, each record for each product. The record for product A, indicates the pieces of information about the product</li>
-</ul>
-<h4 id="—-Field"><a href="#—-Field" class="headerlink" title="—-Field"></a>—-Field</h4><ul>
-<li>A field is a column in a table; it holds one piece of information about all observations in the table.<br>For example, the ‘brand’ field in the ‘products’ table lists all of the brands of our library products.</li>
-</ul>
-<p>Notice that </p>
-<ul>
-<li>field name should be singular, rather than plural. Because it refers to one piece of information contained in that field for a single record. For example, use <code>product_name</code> fields rather than <code>product_names</code></li>
-<li>Two fields in a table cannot have the same name, because each field represent one piece of information about all observations in the table. </li>
-<li>Field name should not share the same name with the table names. It represents one piece of the information about the table entity.</li>
-</ul>
-<hr>
-<p>One special field is unique identifier, which is called a key, and its value can distinguish different records in the same table. This value is very often a number.</p>
-<p>The most suitable choice for a unique identifier is<br>a field that </p>
-<ul>
-<li>Its value is a number that is unique across all entity observations&#x2F;records, </li>
-<li>we can expect that new observation&#x2F;record will receive the unique field value as well</li>
-</ul>
-<p>For example, <code>customer_id</code> can be a field for <code>customers</code> table. </p>
-<ul>
-<li><p>The field value is unique across all current customers, </p>
-</li>
-<li><p>and we can expect that new customers will receive unique customer_ids as well.</p>
-</li>
-</ul>
-<hr>
-<p>When creating tables in a database, it is better to organise data into more separate subject tables rather than few tables that combines information about multiple subjects. Table subject&#x2F;topics should remain separate. </p>
-<p>For example, In a library database, we can have ‘cutomers’ table and ‘checkouts’ table separately, rather than putting all them together as a table ‘customer_checkouts’. This is because one customer can have none or multiple checkouts. Although the data are the same, but if organised the combined information into a table, that can lead to record with missing fields values(one customer can have none checkouts) or duplicate information where ‘customer_num’ that distinguish customer is no longer unique (one customer can have multiple checkouts).</p>
-<p>For example, <code>customers</code> table contains fields: <code>card_num</code>, <code>name</code>, <code>member_year</code>, <code>total_fine</code>.<br><code>checkouts</code> table contains fields: <code>checkout_id</code>, <code>start_date</code>, <code>due_date</code>, <code>book_id</code>, <code>card_num</code></p>
-<p>However, <code>customer_checkouts</code> table contain fields: <code>card_num</code>, <code>name</code>, <code>member_year</code>, <code>total_fine</code>, <code>checkout_id</code>, <code>start_date</code>, <code>due_date</code>, <code>book_id</code></p>
-<hr>
-<p>After data is stored inside a database, we can familiarize tables inside database, and then use SQL to gather information from multiple related tables according the query needs. </p>
-<hr>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/11/21/Database-Concept-1/" data-id="cm3rtcops0003mkuk89au1yuy" data-title="Database concepts-1" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Introduction-to-SQL/" rel="tag">Introduction-to-SQL</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-AWS-Learning-Notes-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-AWS-Learning-Notes-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/11/21/AWS-Learning-Notes-2/" class="article-date">
   <time class="dt-published" datetime="2024-11-21T20:51:53.000Z" itemprop="datePublished">2024-11-21</time>
@@ -182,8 +85,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/11/21/AWS-Learning-Notes-2/">Learning Notes-2-AWS Data Engineer Associate</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      Learning Notes-2-AWS Data Engineer Associate
     </h1>
   
 
@@ -317,262 +220,28 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-AWS-Learning-Notes-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/11/07/AWS-Learning-Notes-1/" class="article-date">
-  <time class="dt-published" datetime="2024-11-07T19:09:27.000Z" itemprop="datePublished">2024-11-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2024/11/21/Database-Concept-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/11/07/AWS-Learning-Notes-1/">Learning Notes-1-AWS Data Engineer Associate</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="–-Create-a-AWS-account-and-use-it"><a href="#–-Create-a-AWS-account-and-use-it" class="headerlink" title="– Create a AWS account and use it"></a>– Create a AWS account and use it</h2><ul>
-<li><p>Go to AWS website, start by setting up a root user email address, which is primary email address associate with my AWS account.<br>After signing up AWS Free Trial for 12 months, we can log in using ‘root user’ to AWS managment console.</p>
-</li>
-<li><p>In default situation, AWS allows user to operate without an explicit <em>AWS account name</em>. In this case, AWS may use your root user email as a placeholder or leave the account name blank in some views.</p>
-</li>
-<li><p>Whether the AWS account name is set up, it can be checked under ‘account name’ inside the account setting from the aws management console.</p>
-</li>
-<li><p>AWS does not allow multiple account names for the same account. But there is a way to use AWS Organisation service to manage and group multiple AWS accounts under a single billing entity.</p>
-</li>
-</ul>
-<h2 id="–-AWS-S3-simple-storage-service"><a href="#–-AWS-S3-simple-storage-service" class="headerlink" title="– AWS S3 (simple storage service)"></a>– AWS S3 (simple storage service)</h2><ul>
-<li><p>Storage Structure:  Bucket(container for storage), Objects(files)</p>
-<ul>
-<li>objects(such as actual files) can be uploaded to the S3 storage</li>
-<li>object is stored in the bucket</li>
-</ul>
-</li>
-<li><p>Each bucket is created in a given region, because it means where the data is stored physically. </p>
-<ul>
-<li>For latency reasons, we normally choose to put the files close to where it is accessed from. For example, where the data or application is accessed from, then choose the relevant given region for Bucket.</li>
-<li>Regulatory Compliance in different regions can also be considered</li>
-</ul>
-</li>
-</ul>
-<h3 id="Naming-convensions-of-Bucket-Name"><a href="#Naming-convensions-of-Bucket-Name" class="headerlink" title="Naming convensions of Bucket Name"></a>Naming convensions of Bucket Name</h3><ul>
-<li>Bucket name need to have globally unique name which is a unique name across all accounts and all regions. </li>
-<li>Naming conventions: <ul>
-<li>Must begin and end with a letter or number</li>
-<li>The length is between 3 min and 63 max characters</li>
-<li>Only lowercase letter, numbers, dots(.), hyphens(-)</li>
-<li>Not formatted as an IP address</li>
-</ul>
-</li>
-</ul>
-<h3 id="How-to-identify-object-in-a-bucket"><a href="#How-to-identify-object-in-a-bucket" class="headerlink" title="How to identify object in a bucket?"></a>How to identify object in a bucket?</h3><h4 id="use-Key"><a href="#use-Key" class="headerlink" title="- use Key"></a>- use Key</h4><ul>
-<li>a key is what an object is identified within a Bucket. Every object is identified with a unique key, the key name is assigned by user.  </li>
-<li>the key can be assigned like file name directly, or the combination of a folder name and a file name, such as<ul>
-<li>example.txt</li>
-<li>folder&#x2F;example.txt</li>
-</ul>
-</li>
-<li>Bucket name is not part of the Key name.</li>
-</ul>
-<h3 id="Use-Cases-of-AWS-S3-Storage"><a href="#Use-Cases-of-AWS-S3-Storage" class="headerlink" title="Use Cases of AWS S3 Storage"></a>Use Cases of AWS S3 Storage</h3><ul>
-<li>It is used for backup and recovery</li>
-<li>application such as website can be build based on S3 whenever we want to store something for applications</li>
-<li>data archiving</li>
-<li>Entire data lake can be built based on S3 buckets</li>
-<li>Store data such as structured data, semi-structured data, files; then data can be used for analytical purpose, such as use Athena to query the data</li>
-</ul>
-<h3 id="Different-storage-classes-for-different-Use-Cases"><a href="#Different-storage-classes-for-different-Use-Cases" class="headerlink" title="Different storage classes for different Use Cases"></a>Different storage classes for different Use Cases</h3><ul>
-<li>Data Durability: the likelihood of loosing an object in a year, such as 99.999999999%(‘11 nines’) chance of losing one object in a year</li>
-<li>Data Availability: the percentage of time that data can be accessed in a year (the data service is operational)</li>
-<li>Data Lifecyle Rules: as the age of data (a file, a folder or an entire bucket) change, storage classes can be changed. <ul>
-<li>For example, in the first 30 days, we might want to access data frequently using Standard S3 storage class</li>
-<li>After 30 days, data can be automatically archived stored with different storage class</li>
-<li>use Lifecycle rules automatically defined the change of storage classes over time</li>
-</ul>
-</li>
-<li>Data Versioning: Previous versions of an object can be retreved when we make some accidental or deletion of the object</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/11/07/AWS-Learning-Notes-1/" data-id="cm3rtcoph0000mkuk6q9md1j9" data-title="Learning Notes-1-AWS Data Engineer Associate" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AWS-Data-Engineer-Associate/" rel="tag">AWS-Data-Engineer-Associate</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-some-concepts" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/10/24/some-concepts/" class="article-date">
-  <time class="dt-published" datetime="2024-10-24T18:09:27.000Z" itemprop="datePublished">2024-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          Database concepts-1
         
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/10/24/some-concepts/">some-concepts</a>
-    </h1>
   
+    <a href="/2024/11/07/AWS-Learning-Notes-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Learning Notes-1-AWS Data Engineer Associate</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="What-is-a-data-driven-organisation"><a href="#What-is-a-data-driven-organisation" class="headerlink" title="What is a data-driven organisation?"></a>What is a data-driven organisation?</h2><p>Organisation might not define themselves as a “data-driven organisation” or “non-data-driven organisation”, but to some extent they use data in their decision-making and operations in the modern world; they create stategies, goal and make decisions based on insights derived from data, as opposed to decisions based on the leaders’ opinions, experiences or “gut feelings”(intuition-based decisions).</p>
-<p>For example, a data-backed decisions can be made in a retail company by analyzing real-time sales data, customer preferences, and market trends to identify the best popular products in each season, not only rely on the store manager’s experience regarding which product to stock in different seasons.</p>
-<p>It is clear that data-driven decision can make organisations have a competitive edge because informed decisions can be made based on factual data insights. The extent to which organisations use data in their operations can reflect their culture. Some organisations might be in the process of becoming data-driven by modernizing their data infrastructure or shifting their culture.  </p>
-<h2 id="What-is-not-a-data-driven-organisation"><a href="#What-is-not-a-data-driven-organisation" class="headerlink" title="What is not a data-driven organisation?"></a>What is not a data-driven organisation?</h2><ul>
-<li>Decisions are made based on opinions, experiences or gut-feeling of leaders, professionals</li>
-<li>There is no strong system&#x2F;infrastructure for data collection, process, storage or analysis. Data is scattered, not easily accessible.</li>
-<li>Data use is not integrated into daily operations and long-term planning, but occassionally used or used in a reactive way. </li>
-<li>Data is not emphasized&#x2F;valued or encouraged in backing up decisions across departments. This might because employees and leaders do not understand how to use it effectively. </li>
-<li>Data can be collected, stored, but not properly organized, stored that make it difficult or complext to analyze to derive a meaningful insights that help organisations. Such as, What do you want to achieve with the data? How to organise data to make analysis accessible?</li>
-</ul>
-<h2 id="What-is-a-data-collection"><a href="#What-is-a-data-collection" class="headerlink" title="What is a data collection?"></a>What is a data collection?</h2><p>It is a process, where information can be gathered from different sources.<br>Data sources can be physical records, surveys, sensors, websites, customer interactions or any other sources that organisation can gather useful information. </p>
-<p>For example, a coffeeshop might use the following data sources;</p>
-<ul>
-<li>Physical Records&#x2F;Digital Records; a logbook for keeping daily sales and the number of customers</li>
-<li>Surveys&#x2F;Receipt Surveys; customers can fill out a short survey to rate the service etc.</li>
-<li>Website; a website that contains menu, allow placing order online. how people interact with website can be tracked such as number of visits, popular products etc.</li>
-<li>Customer interactions; social media sentiment, store conversations</li>
-</ul>
-<p>Better decisions can be made to help the coffee shop grow, such as adjusting the menu, improving customer services etc.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/24/some-concepts/" data-id="cm3rtcopu0005mkuk15gsgyx4" data-title="some-concepts" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-test-blog" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/10/24/test-blog/" class="article-date">
-  <time class="dt-published" datetime="2024-10-24T18:04:57.000Z" itemprop="datePublished">2024-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/10/24/test-blog/">test-blog</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="First-Chapter"><a href="#First-Chapter" class="headerlink" title="First Chapter"></a>First Chapter</h2><p>content</p>
-<hr>
-<h2 id="Second-chapter"><a href="#Second-chapter" class="headerlink" title="Second chapter"></a>Second chapter</h2><p>content</p>
-<hr>
-<h2 id="references"><a href="#references" class="headerlink" title="references"></a>references</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/24/test-blog/" data-id="cm3rtcopy0008mkukebvfhflk" data-title="test-blog" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/10/24/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-10-24T17:58:11.497Z" itemprop="datePublished">2024-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/10/24/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/24/hello-world/" data-id="cm3rtcopt0004mkuk22mrd41f" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
